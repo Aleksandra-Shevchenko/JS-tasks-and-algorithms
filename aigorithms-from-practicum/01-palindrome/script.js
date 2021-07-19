@@ -1,19 +1,20 @@
 
 // решениe для более длинных строк
 function palindrome(str) {
+  if (typeof str !==  'string') return 'Parameter must be a string';
+  
   const cleanWord = str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,'');
   const lengthWord = cleanWord.length;
 
   for (let i = 0; i <= Math.ceil(lengthWord / 2); i++) {
-    if (cleanWord[i] === cleanWord[lengthWord - 1 - i]) {
-      return true;
-    }
+    if (cleanWord[i] === cleanWord[lengthWord - 1 - i]) return true;
     return false;
   }
 }
 
 // короткое в записи решение:
 function palindrome2(str) {
+  if (typeof str !==  'string') return 'Parameter must be a string';
   str = str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,'');
   return str === str.split('').reverse().join('');
 }
