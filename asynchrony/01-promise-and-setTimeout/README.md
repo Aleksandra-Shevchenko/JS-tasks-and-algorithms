@@ -8,10 +8,9 @@
 ```
 const start = Date.now();
 for (var i = 0; i < 5; i++) {
-	setTimeout(() => {
-		console.log(i, Date.now() - start);
-	}, i * 1000);
+  setTimeout(() => {
+    console.log(i, Date.now() - start);
+  }, i * 1000);
 }
 console.log('finish', Date.now() - start);
-
 ```
